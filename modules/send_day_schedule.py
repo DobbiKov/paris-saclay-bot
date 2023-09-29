@@ -58,7 +58,7 @@ async def send_day_schedule(date, day, week, chat_id, _dp):
     # ex_week = get_excel_row_for_week(week)
     cours = get_excel_fields_for_day(day, week)
     if len(cours) == 0:
-        return await _dp.bot.send_message(chat_id, f"Aujourd'hui c'est un jour de congé!")
+        return await _dp.bot.send_message(chat_id, f"<b>{get_day_of_the_week_by_day(day)} ({date})</b>:\nIl n'y a aucun cours.")
     
     text = f"<b>{get_day_of_the_week_by_day(day)} ({date})</b>:\n" 
     text += "==================\n"
