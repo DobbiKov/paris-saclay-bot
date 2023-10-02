@@ -19,9 +19,9 @@ class Excel():
 
     def get_sheet(self, sheet):
 
-            for i in self.wb.sheetnames:
-                print(f"{i}", end=" ")
-            print()
+            # for i in self.wb.sheetnames:
+            #     print(f"{i}", end=" ")
+            # print()
 
             sheetName = sheet
             try:

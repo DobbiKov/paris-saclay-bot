@@ -10,7 +10,6 @@ from loader import database
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message, state: FSMContext):
     user = database.get_user(message.from_user.id)
-    print(user)
     if(len(user) == 0):
         database.create_user(message.from_user.id, message.from_user.username or "", "L1-MI3")
 
