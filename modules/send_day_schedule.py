@@ -15,11 +15,11 @@ def excel_fields_for_day(day):
     return days[day-1]
 
 def get_day_of_the_week_by_day(day) -> str:
-    day_of_the_week = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"]
+    day_of_the_week = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
     return day_of_the_week[day-1]
 
 def get_excel_fields_for_day(day, week):
-    if day > 5:
+    if day > 5 or day == 0:
         return []
     row_week = get_excel_row_for_week(week)
     days = [
