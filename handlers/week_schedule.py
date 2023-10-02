@@ -13,7 +13,7 @@ from datetime import date, timedelta
 
 from modules.send_day_schedule import send_day_schedule
 
-async def send_week_schedule(chat_id, _dp):
+async def send_week_schedule(chat_id, user_id, _dp):
     today = date.today()
     d0 = date(2023, 9, 11)
     delta = today - d0
@@ -25,10 +25,10 @@ async def send_week_schedule(chat_id, _dp):
         week += 1
     for i in range(5):
         local_date = d0 + timedelta(days=days_between - day + i) 
-        await send_day_schedule(local_date, i + 1, week, chat_id, _dp)
+        await send_day_schedule(local_date, i + 1, week, chat_id, user_id, _dp)
 
 @dp.message_handler(commands=['week_schedule'])
 async def week_schedule_command(message: types.Message, state: FSMContext):
     # add_announce = AddAnnounce("oneplus 8", "", "1000", "fdsafads", "dsfafasd", "Oneplus бери не хочу")
     # willhaben.add_announce(add_announce)
-    await send_week_schedule(message.chat.id, dp)
+    await send_week_schedule(message.chat.id, message.from_user.id, dp)

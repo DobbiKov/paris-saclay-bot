@@ -1,4 +1,5 @@
 from modules.excel import Excel
+from loader import database
 
 def get_excel_row_for_week(week):
     return 6 + week
@@ -50,17 +51,25 @@ def get_hours(day):
         days_fields[i] = days_fields[i] + '4'
     return days_fields
 
-async def send_day_schedule(date, day, week, chat_id, _dp):
+async def send_day_schedule(date, day, week, chat_id, user_id, _dp):
     excel = Excel()
-    excel.get_file()
-    excel.get_sheet()
+    user = database.get_user(user_id)
+    formation = user['FORMATION']
+    excel.get_file(
+        excel.get_formation_file(formation)
+    )
+    if user == None or len(user) == 0:
+        return await _dp.bot.send_message(chat_id, f"Something went wrong, you're not in database!") 
+    excel.get_sheet(
+        excel.get_formation_sheet(formation)
+    )
 
     # ex_week = get_excel_row_for_week(week)
     cours = get_excel_fields_for_day(day, week)
     if len(cours) == 0:
         return await _dp.bot.send_message(chat_id, f"<b>{get_day_of_the_week_by_day(day)} ({date})</b>:\nIl n'y a aucun cours.")
     
-    text = f"<b>{get_day_of_the_week_by_day(day)} ({date})</b>:\n" 
+    text = f"<b>{get_day_of_the_week_by_day(day)} ({date}) ({formation})</b>:\n" 
     text += "==================\n"
     bat_salles = get_batiment_salle(day)
     hours = get_hours(day)
