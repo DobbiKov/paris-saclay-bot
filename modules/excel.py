@@ -63,13 +63,13 @@ class Excel():
 
     def get_formation_file(self, formation):
         files = {
-            'L1-MI1': './Semainier_L1 MI_LDD1_IM_23-24-2.xlsx',
-            'L1-MI2': './Semainier_L1 MI_LDD1_IM_23-24-2.xlsx',
-            'L1-MI3': './Semainier_L1 MI_LDD1_IM_23-24-2.xlsx',
-            'L1-MI4': './Semainier_L1 MI_LDD1_IM_23-24-2.xlsx',
+            'L1-MI1': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
+            'L1-MI2': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
+            'L1-MI3': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
+            'L1-MI4': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
 
-            'LDD1-IM1': './Semainier_L1 MI_LDD1_IM_23-24-2.xlsx',
-            'LDD1-IM2': './Semainier_L1 MI_LDD1_IM_23-24-2.xlsx',
+            'LDD1-IM1': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
+            'LDD1-IM2': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
 
             'L1-MP-A1': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
             'L1-MP-A2': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
