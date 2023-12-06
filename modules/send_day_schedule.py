@@ -59,7 +59,7 @@ async def send_day_schedule(date, day, week, chat_id, user_id, _dp):
         excel.get_formation_file(formation)
     )
     if user == None or len(user) == 0:
-        return await _dp.bot.send_message(chat_id, f"Something went wrong, you're not in database!") 
+        return await _dp.bot.send_message(chat_id, f"Something went wrong, you're not in database! Please, write /start command!") 
     excel.get_sheet(
         excel.get_formation_sheet(formation)
     )
