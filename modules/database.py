@@ -28,11 +28,28 @@ class Database:
         for row in cursor:
             if row[0] == "" or row[0] == None:
                 return None
+            
             data['ID'] = row[0]
             data['USER_ID'] = row[1]
             data['NICKNAME'] = row[2]
             data['FORMATION'] = row[3]
         return data
+    
+    def get_users(self):
+        cursor = self.conn.execute(f"SELECT ID, USER_ID, NICKNAME, FORMATION from USERS")
+        data = []
+        for row in cursor:
+            if row[0] == "" or row[0] == None:
+                return None
+            
+            user = {}
+            user['ID'] = row[0]
+            user['USER_ID'] = row[1]
+            user['NICKNAME'] = row[2]
+            user['FORMATION'] = row[3]
+            data.append(user)
+        return data
+        
     
     def create_user(self, user_id, nickname, formation="L1-MI3"):
         if formation is None or formation == "":
