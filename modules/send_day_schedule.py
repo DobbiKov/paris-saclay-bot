@@ -2,7 +2,7 @@ from modules.excel import Excel
 from loader import database
 
 def get_excel_row_for_week(week):
-    return 6 + week
+    return 5 + week
 def excel_fields_for_day(day):
     if day > 5:
         return []

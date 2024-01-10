@@ -41,44 +41,46 @@ class Excel():
     
     def get_formation_sheet(self, formation):
         sheets = {
-            'L1-MI1': 'L1 MI-1',
-            'L1-MI2': 'L1 MI-2',
-            'L1-MI3': 'L1 MI-3',
-            'L1-MI4': 'L1 MI-4',
+            'L1-MI1': 'MI-1',
+            'L1-MI2': 'MI-2',
+            'L1-MI3': 'MI-3',
+            'L1-MI4': 'MI-4',
 
             'LDD1-IM1': 'LDD1 IM-1',
             'LDD1-IM2': 'LDD1 IM-2',
 
-            'L1-MP-A1': ' A1 ',
+            'L1-MP-A1': 'A1',
             'L1-MP-A2': 'A2',
-            'L1-MP-A3': 'A3 ',
-            'L1-MP-B1': 'B1 ',
-            'L1-MP-B2': 'B2 ',
+            'L1-MP-A3': 'A3',
+            'L1-MP-B1': 'B1',
+            'L1-MP-B2': 'B2',
 
-            'LDD1-MPSI-B3': 'B3 LDD1 MPSI',
-            'LDD1-MPSI-B4': 'B4 LDD1 MPSI',
-            'LDD1-MPSI-STAPS-B5': 'B5 LDD1 STAPS',
+            'LDD1-MPSI-B3': 'MPSI B3',
+            'LDD1-MPSI-B4': 'MPSI B4',
+            'LDD1-MPSI-STAPS-B5': 'LDD1 STAPS-SPI',
+            'LDD2-MPSI-STAPS': 'LDD2 STAPS-SPI',
         }
         return sheets[formation]
-
+    
     def get_formation_file(self, formation):
         files = {
-            'L1-MI1': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
-            'L1-MI2': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
-            'L1-MI3': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
-            'L1-MI4': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
+            'L1-MI1': './Semainier_MI_IM_S2_23-24.xlsx',
+            'L1-MI2': './Semainier_MI_IM_S2_23-24.xlsx',
+            'L1-MI3': './Semainier_MI_IM_S2_23-24.xlsx',
+            'L1-MI4': './Semainier_MI_IM_S2_23-24.xlsx',
 
-            'LDD1-IM1': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
-            'LDD1-IM2': './Semainier_L1 MI_LDD1_IM_23-24.xlsx',
+            'LDD1-IM1': './Semainier_MI_IM_S2_23-24.xlsx',
+            'LDD1-IM2': './Semainier_MI_IM_S2_23-24.xlsx',
 
-            'L1-MP-A1': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
-            'L1-MP-A2': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
-            'L1-MP-A3': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
-            'L1-MP-B1': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
-            'L1-MP-B2': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
+            'L1-MP-A1': './Semainier_MP_MPSI_STAPS S2_23-24.xlsx',
+            'L1-MP-A2': './Semainier_MP_MPSI_STAPS S2_23-24.xlsx',
+            'L1-MP-A3': './Semainier_MP_MPSI_STAPS S2_23-24.xlsx',
+            'L1-MP-B1': './Semainier_MP_MPSI_STAPS S2_23-24.xlsx',
+            'L1-MP-B2': './Semainier_MP_MPSI_STAPS S2_23-24.xlsx',
 
-            'LDD1-MPSI-B3': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
-            'LDD1-MPSI-B4': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
-            'LDD1-MPSI-STAPS-B5': './Semainier_L1 MP_LDD1 MPSI_STAPS_23-24.xlsx',
+            'LDD1-MPSI-B3': './Semainier_MP_MPSI_STAPS S2_23-24.xlsx',
+            'LDD1-MPSI-B4': './Semainier_MP_MPSI_STAPS S2_23-24.xlsx',
+            'LDD1-MPSI-STAPS-B5': './Semainier_MP_MPSI_STAPS S2_23-24.xlsx',
+            'LDD2-MPSI-STAPS': './Semainier_MP_MPSI_STAPS S2_23-24.xlsx',
         }
         return files[formation]

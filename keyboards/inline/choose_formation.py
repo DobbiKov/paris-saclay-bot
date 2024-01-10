@@ -39,6 +39,7 @@ def choose_formation_mp_keyboard():
     button12 = InlineKeyboardButton("LDD1-MPSI-B3", callback_data="choose_form:LDD1-MPSI-B3")
     button13 = InlineKeyboardButton("LDD1-MPSI-B4", callback_data="choose_form:LDD1-MPSI-B4")
     button14 = InlineKeyboardButton("LDD1-MPSI-STAPS-B5", callback_data="choose_form:LDD1-MPSI-STAPS-B5")
+    button14 = InlineKeyboardButton("LDD2-MPSI-STAPS", callback_data="choose_form:LDD2-MPSI-STAPS")
 
     keyboard = InlineKeyboardMarkup()
     keyboard.add(button7, button8, button9, button10, button11)

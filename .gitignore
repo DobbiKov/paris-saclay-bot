@@ -2,3 +2,5 @@ env/
 data.py
 __pycache__/
 users.db
+archive/
+users.db

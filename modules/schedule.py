@@ -4,7 +4,7 @@ from modules.send_day_schedule import send_day_schedule
 
 async def send_today_schedule(chat_id, user_id, _dp):
     today = date.today()
-    d0 = date(2023, 9, 11)
+    d0 = date(2024, 1, 8)
     delta = today - d0
     days_between = delta.days + 1
 
@@ -14,7 +14,7 @@ async def send_today_schedule(chat_id, user_id, _dp):
 
 async def send_tomorrow_schedule(chat_id, user_id, _dp):
     tomorrow = date.today() + timedelta(days=1)
-    d0 = date(2023, 9, 11)
+    d0 = date(2024, 1, 8)
     delta = tomorrow - d0
     days_between = delta.days + 1
 
